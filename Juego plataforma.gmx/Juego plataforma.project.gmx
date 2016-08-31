@@ -3,10 +3,14 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_dead</sound>
     <sound>sound\snd_kill</sound>
+    <sound>sound\snd_door</sound>
+    <sound>sound\snd_coin</sound>
+    <sound>sound\snd_music</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_block</sprite>
@@ -15,19 +19,35 @@
     <sprite>sprites\spr_playerleft</sprite>
     <sprite>sprites\spr_player_powerup</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprites name="Platforms">
+      <sprite>sprites\spr_platformdown</sprite>
+      <sprite>sprites\spr_platformfly</sprite>
+      <sprite>sprites\spr_platformH</sprite>
+      <sprite>sprites\spr_platform</sprite>
+      <sprite>sprites\spr_base</sprite>
+    </sprites>
     <sprite>sprites\spr_enemyleft</sprite>
     <sprite>sprites\spr_powerup_speed</sprite>
     <sprite>sprites\spr_next</sprite>
     <sprite>sprites\spr_enemyfly</sprite>
     <sprite>sprites\spr_enemyflyleft</sprite>
-    <sprite>sprites\spr_points</sprite>
+    <sprite>sprites\spr_tutorialpoints</sprite>
     <sprite>sprites\spr_save</sprite>
-    <sprite>sprites\spr_platform</sprite>
-    <sprite>sprites\spr_platformH</sprite>
+    <sprite>sprites\spr_powerup_shot</sprite>
+    <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_coin</sprite>
+    <sprite>sprites\spr_player2</sprite>
+    <sprite>sprites\spr_player2left</sprite>
+    <sprite>sprites\spr_easy</sprite>
+    <sprite>sprites\spr_hard</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\bck1</background>
+    <background>background\bck2</background>
+    <background>background\bcktut</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -37,8 +57,16 @@
     <font>fonts\font0</font>
   </fonts>
   <objects name="objects">
+    <objects name="Platforms">
+      <object>objects\obj_platformfly</object>
+      <object>objects\obj_platformdown</object>
+      <object>objects\obj_platformH</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_base</object>
+    </objects>
     <object>objects\obj_block</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_player2</object>
     <object>objects\obj_powerup</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_enemy_fly</object>
@@ -47,20 +75,47 @@
     <object>objects\obj_final</object>
     <object>objects\obj_next</object>
     <object>objects\obj_score</object>
-    <object>objects\obj_points</object>
-    <object>objects\obj_lives</object>
+    <object>objects\obj_coins</object>
     <object>objects\obj_lives_start</object>
     <object>objects\obj_enemynofall</object>
     <object>objects\obj_checkpoint</object>
-    <object>objects\obj_platform</object>
-    <object>objects\obj_platformH</object>
+    <object>objects\obj_powerup_shot</object>
+    <object>objects\obj_bullet</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_text</object>
+    <object>objects\obj_controller_indicators</object>
+    <object>objects\obj_charactertext</object>
+    <object>objects\obj_difficultytext</object>
+    <object>objects\obj_music</object>
+    <object>objects\obj_tut_move</object>
+    <objects name="Tutorial">
+      <object>objects\obj_tut_powerupspeed</object>
+      <object>objects\obj_tut_jump</object>
+      <object>objects\obj_tut_powerupjump</object>
+      <object>objects\obj_tut_coins</object>
+      <object>objects\obj_tut_platforms</object>
+      <object>objects\obj_tut_enemy</object>
+    </objects>
+    <object>objects\obj_select</object>
+    <object>objects\obj_player1s</object>
+    <object>objects\obj_player2s</object>
+    <object>objects\obj_C</object>
+    <object>objects\obj_easy</object>
+    <object>objects\obj_hard</object>
+    <object>objects\obj_difficulty</object>
+    <object>objects\obj_D</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialize</room>
     <room>rooms\Start</room>
+    <room>rooms\Select</room>
+    <room>rooms\Tutorial</room>
     <room>rooms\room0</room>
+    <room>rooms\Bonus</room>
     <room>rooms\room4</room>
+    <room>rooms\room5</room>
     <room>rooms\Final</room>
+    <room>rooms\Difficulty</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
